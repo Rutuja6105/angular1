@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Data Binding Example</title>
+
+  <!-- ✅ Correct AngularJS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="studentController">
+
+  <h2>AngularJS Data Binding Examples</h2>
+
+  <!-- Two-way binding -->
+  <label>Enter the student name:</label>
+  <input type="text" ng-model="student.name" placeholder="Enter name">
+  <br><br>
+  <label >Enter the Roll Number</label>
+<input type="text" ng-model="student.roll" placeholder="Enter roll number">
+  <br><br>
+  <label >Enter the course name</label>
+<input type="text" ng-model="student.course" placeholder="Enter course name ">
+  <br><br>
+
+  <!-- One-way binding -->
+  <p><b>One way binding (student name):</b> {{student.name}}</p>
+
+  <!-- Two-way binding live update -->
+  <p><b>Two-way binding live:</b></p>
+  <label >name :- </label><input type="text" ng-model="student.name"><br><br>
+
+
+  <label >Roll Number:- </label><input type="text" ng-model="student.roll"><br><br>
+
+
+  <label>Course:- </label><input type="text" ng-model="student.course"><br><br> 
+
+  <!-- Binding more student data -->
+  <p><b>Roll No:</b> {{student.roll}}</p>
+  <p><b>Course:</b> {{student.course}}</p>
+
+  <!-- ✅ Load bind.js after AngularJS -->
+  <script src="bind.js"></script>
+</body>
+</html>
